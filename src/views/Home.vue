@@ -29,6 +29,7 @@
 </template>
 
 <script>
+
 window.onload = function() {
   var c = document.getElementById("imageCanvas");
   var ctx = c.getContext("2d");
