@@ -1,6 +1,5 @@
 <template>
-    <div class="columns">
-        <div class="column has-text-centered">
+    
             <div class="field is-horizontal">
                 <div class="field-label">
                     <select v-model="equipmentSelect">
@@ -102,8 +101,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+    
 </template>
 
 <script>
