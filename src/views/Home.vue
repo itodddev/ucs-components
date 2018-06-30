@@ -2,23 +2,23 @@
 <div class="home">
   <div class="columns">
       <div class="column has-text-centered">
-        <RackItem row="1" />
-        <RackItem row="2" />
-        <RackItem row="3" />
-        <RackItem row="4" />
-        <RackItem row="5" />
-        <RackItem row="6" />
-        <RackItem row="7" />
-        <RackItem row="8" />
-        <RackItem row="9" />
-        <RackItem row="10" />
-        <RackItem row="11" />
-        <RackItem row="12" />
-        <RackItem row="13" />
-        <RackItem row="14" />
-        <RackItem row="15" />
+        <rack-item row="1" />
+        <rack-item row="2" />
+        <rack-item row="3" />
+        <rack-item row="4" />
+        <rack-item row="5" />
+        <rack-item row="6" />
+        <rack-item row="7" />
+        <rack-item row="8" />
+        <rack-item row="9" />
+        <rack-item row="10" />
+        <rack-item row="11" />
+        <rack-item row="12" />
+        <rack-item row="13" />
+        <rack-item row="14" />
+        <rack-item row="15" />
 
-        <Parameters />
+        <parameters />
       </div>
       <img id="blankimg" src="../../public/img/blank-layout.jpg" alt="" style="display:none;">
       <div class="column hast-text-centered">
@@ -29,7 +29,6 @@
 </template>
 
 <script>
-
 window.onload = function() {
   var c = document.getElementById("imageCanvas");
   var ctx = c.getContext("2d");

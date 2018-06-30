@@ -110,7 +110,7 @@
 
 <script>
 export default {
-  name: "RackItem",
+  name: "rack-item",
   props: ["row"],
   data() {
     return {
@@ -128,7 +128,7 @@ export default {
   padding-right: 1em;
 }
 .labelPadding {
-  padding-left: .5em;
+  padding-left: 0.5em;
   padding-right: 1em;
 }
 </style>

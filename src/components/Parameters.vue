@@ -180,7 +180,7 @@
 
 <script>
 export default {
-  name: "Parameters",
+  name: "parameters",
   data() {
     return {
       ruSelection: 42,
