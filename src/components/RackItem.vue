@@ -72,31 +72,31 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="0" v-model="equipmentQuantity"> &nbsp;0
+                                <input type="radio" :name="row" value="0" v-model="equipmentQuantity"> &nbsp;0
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="1" v-model="equipmentQuantity"> &nbsp;1
+                                <input type="radio" :name="row" value="1" v-model="equipmentQuantity"> &nbsp;1
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="2" v-model="equipmentQuantity"> &nbsp;2
+                                <input type="radio" :name="row" value="2" v-model="equipmentQuantity"> &nbsp;2
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="3" v-model="equipmentQuantity"> &nbsp;3
+                                <input type="radio" :name="row" value="3" v-model="equipmentQuantity"> &nbsp;3
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="4" v-model="equipmentQuantity"> &nbsp;4
+                                <input type="radio" :name="row" value="4" v-model="equipmentQuantity"> &nbsp;4
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="6" v-model="equipmentQuantity"> &nbsp;6
+                                <input type="radio" :name="row" value="6" v-model="equipmentQuantity"> &nbsp;6
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="8" v-model="equipmentQuantity"> &nbsp;8
+                                <input type="radio" :name="row" value="8" v-model="equipmentQuantity"> &nbsp;8
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="12" v-model="equipmentQuantity"> &nbsp;12
+                                <input type="radio" :name="row" value="12" v-model="equipmentQuantity"> &nbsp;12
                             </label>
                             <label class="radio">
-                                <input type="radio" name="equipmentQuantity" value="16" v-model="equipmentQuantity"> &nbsp;16
+                                <input type="radio" :name="row" value="16" v-model="equipmentQuantity"> &nbsp;16
                             </label>
                         </div>
                     </div>
@@ -109,8 +109,11 @@
 <script>
 export default {
   name: "RackItem",
+  props: ["row"],
   data() {
     return {
+      equipmentSelect: "",
+      equipmentQuantity: 0
     };
   }
 };

@@ -43,13 +43,13 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="face" value="FRONT" v-model="rackFace"> &nbsp;Front
+                                <input type="radio" name="face" value="FRONT" v-model="rackFace" /><span class="choicePadding">Front</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="face" value="REAR" v-model="rackFace"> &nbsp;Rear
+                                <input type="radio" name="face" value="REAR" v-model="rackFace"/><span class="choicePadding">Rear</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="face" value="PERSPECTIVE" v-model="rackFace"> &nbsp;Perspective
+                                <input type="radio" name="face" value="PERSPECTIVE" v-model="rackFace" /><span class="choicePadding">Perspective</span>
                             </label>
                         </div>
                     </div>
@@ -68,10 +68,10 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="bezl" value="YES" v-model="frontBezel"> &nbsp;Yes
+                                <input type="radio" name="bezl" value="YES" v-model="frontBezel" /><span class="choicePadding">Yes</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="bezl" value="NO" v-model="frontBezel"> &nbsp;No
+                                <input type="radio" name="bezl" value="NO" v-model="frontBezel" /><span class="choicePadding">No</span>
                             </label>
                         </div>
                     </div>
@@ -90,13 +90,13 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="load" value="HIGH" v-model="rackLoad"> &nbsp;High
+                                <input type="radio" name="load" value="HIGH" v-model="rackLoad" /><span class="choicePadding">High</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="load" value="LOW" v-model="rackLoad"> &nbsp;Low
+                                <input type="radio" name="load" value="LOW" v-model="rackLoad" /><span class="choicePadding">Low</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="load" value="NO" v-model="rackLoad"> &nbsp;No Rack
+                                <input type="radio" name="load" value="NO" v-model="rackLoad" /><span class="choicePadding">No Rack</span>
                             </label>
                         </div>
                     </div>
@@ -115,10 +115,10 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="pnls" value="YES" v-model="panels"> &nbsp;Yes
+                                <input type="radio" name="pnls" value="YES" v-model="panels" /><span class="choicePadding">Yes</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="pnls" value="NO" v-model="panels"> &nbsp;No
+                                <input type="radio" name="pnls" value="NO" v-model="panels" /><span class="choicePadding">No</span>
                             </label>              
                         </div>
                     </div>
@@ -137,13 +137,13 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="format" value="PHOTO" v-model="format"> &nbsp;Photo
+                                <input type="radio" name="format" value="PHOTO" v-model="format" /><span class="choicePadding">Photo</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="format" value="DRAWING" v-model="format"> &nbsp;Drawing
+                                <input type="radio" name="format" value="DRAWING" v-model="format" /><span class="choicePadding">Drawing</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="format" value="OVERLAY" v-model="format"> &nbsp;Overlay
+                                <input type="radio" name="format" value="OVERLAY" v-model="format" /><span class="choicePadding">Overlay</span>
                             </label>               
                         </div>
                     </div>
@@ -151,7 +151,6 @@
             </div>
 
             <div class="field is-horizontal">
-
                 <div class="field-label">
                     <label class="label">Image Size:</label>
                 </div>
@@ -160,14 +159,14 @@
                     <div class="field is-narrow">
                         <div class="control has-text-centered">
                             <label class="radio">
-                                <input type="radio" name="image-size" value="SMALL" v-model="imageSize"> &nbsp;Small
+                                <input type="radio" name="image-size" value="SMALL" v-model="imageSize"/><span class="choicePadding">Small</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="image-size" value="MEDIUM" v-model="imageSize"> &nbsp;Medium
+                                <input type="radio" name="image-size" value="MEDIUM" v-model="imageSize" /><span class="choicePadding">Medium</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="image-size" value="LARGE" v-model="imageSize"> &nbsp;Large
-                            </label>               
+                                <input type="radio" name="image-size" value="LARGE" v-model="imageSize" /><span class="choicePadding">Large</span>
+                            </label>           
                         </div>
                     </div>
                 </div>
@@ -200,54 +199,38 @@ export default {
       return `ru="${this.ruSelection}" extra="0" `;
     },
     buildRackFace() {
-      if (this.rackFace === "FRONT") {
-        return `face="FRONT" `;
-      } else if (this.rackFace === "REAR") {
-        return `face="REAR" `;
-      } else {
-        return `face="PERSPECTIVE" `;
-      }
+      if (this.rackFace === "FRONT") return `face="FRONT" `;
+      else if (this.rackFace === "REAR") return `face="REAR" `;
+
+      return `face="PERSPECTIVE" `;
     },
     buildFrontBezel() {
-      if (this.frontBezel === "YES") {
-        return `bezel="YES" `;
-      } else {
-        return `bezel="NO" `;
-      }
+      if (this.frontBezel === "YES") return `bezel="YES" `;
+
+      return `bezel="NO" `;
     },
     buildRackLoad() {
-      if (this.rackLoad === "HIGH") {
-        return `load="HIGH" `;
-      } else if (this.rackLoad === "LOW") {
-        return `load="LOW" `;
-      } else {
-        return `load="NO" `;
-      }
+      if (this.rackLoad === "HIGH") return `load="HIGH" `;
+      else if (this.rackLoad === "LOW") return `load="LOW" `;
+
+      return `load="NO" `;
     },
     buildRackPanels() {
-      if (this.panels === "YES") {
-        return `panels="YES" `;
-      } else {
-        return `panels="NO" `;
-      }
+      if (this.panels === "YES") return `panels="YES" `;
+
+      return `panels="NO" `;
     },
     buildImageFormat() {
-      if (this.format === "PHOTO") {
-        return `format="PHOTO" `;
-      } else if (this.format === "DRAWING") {
-        return `format="DRAWING" `;
-      } else {
-        return `format="OVERLAY" `;
-      }
+      if (this.format === "PHOTO") return `format="PHOTO" `;
+      else if (this.format === "DRAWING") return `format="DRAWING" `;
+
+      return `format="OVERLAY" `;
     },
     buildImageSize() {
-      if (this.imageSize === "SMALL") {
-        return `size="SMALL" `;
-      } else if (this.imageSize === "MEDIUM") {
-        return `size="MEDIUM" `;
-      } else {
-        return `size="LARGE" `;
-      }
+      if (this.imageSize === "SMALL") return `size="SMALL" `;
+      else if (this.imageSize === "MEDIUM") return `size="MEDIUM" `;
+
+      return `size="LARGE" `;
     },
     buildParameterString() {
       return `${this.paramsStart}${this.buildRackUnits}${this.buildRackFace}${
@@ -261,4 +244,8 @@ export default {
 </script>
 
 <style scoped>
+.choicePadding {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 </style>

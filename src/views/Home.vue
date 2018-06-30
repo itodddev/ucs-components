@@ -1,15 +1,22 @@
 <template>
   <div class="home">
     
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    <RackItem />
-    
+    <RackItem row="1" />
+    <RackItem row="2" />
+    <RackItem row="3" />
+    <RackItem row="4" />
+    <RackItem row="5" />
+    <RackItem row="6" />
+    <RackItem row="7" />
+    <RackItem row="8" />
+    <RackItem row="9" />
+    <RackItem row="10" />
+    <RackItem row="11" />
+    <RackItem row="12" />
+    <RackItem row="13" />
+    <RackItem row="14" />
+    <RackItem row="15" />
+
     <Parameters />
 
   </div>
