@@ -170,16 +170,15 @@
                     </div>
                 </div>
             </div>
-            {{ buildParameterString }}
         </div>
+        <br>
+        {{ buildParameterString }}
     </div> <!-- End Column -->
 </div> <!-- End Columns -->
 
 </template>
 
 <script>
-import { EventBus } from "../EventBus.js";
-
 export default {
   name: "parameters",
   data() {
@@ -234,15 +233,11 @@ export default {
       return `size="LARGE" `;
     },
     buildParameterString() {
-        var output = `${this.paramsStart}${this.buildRackUnits}${
-            this.buildRackFace
-        }${this.buildFrontBezel}${this.buildRackLoad}${this.buildRackPanels}${
-            this.buildImageFormat
-        }${this.buildImageSize}${this.paramsEnd}`;
-
-        EventBus.$emit("parametersString", output);
-
-        return output;
+      return `${this.paramsStart}${this.buildRackUnits}${this.buildRackFace}${
+        this.buildFrontBezel
+      }${this.buildRackLoad}${this.buildRackPanels}${this.buildImageFormat}${
+        this.buildImageSize
+      }${this.paramsEnd}`;
     }
   }
 };

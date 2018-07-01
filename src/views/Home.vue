@@ -20,7 +20,7 @@
         <rack-item row="15" />
 
         <parameters />    
-        {{ onParametersString }}
+        
       </div>
       <img id="blankimg" src="../../public/img/blank-layout.jpg" alt="" style="display:none;">
       <div class="column hast-text-centered">
@@ -41,7 +41,6 @@ window.onload = function() {
 // @ is an alias to /src
 import Parameters from "@/components/Parameters.vue";
 import RackItem from "@/components/RackItem.vue";
-import { EventBus } from "../EventBus.js";
 
 export default {
   name: "home",
@@ -53,13 +52,6 @@ export default {
   components: {
     Parameters,
     RackItem
-  },
-  computed: {
-    onParametersString() {
-      EventBus.$on("parametersString", parametersString => {
-        this.parametersString = parametersString;
-      });
-    }
   }
 };
 </script>
