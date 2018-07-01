@@ -71,31 +71,31 @@
         <div class="field is-narrow">
             <div class="control has-text-centered">
                 <label class="radio">
-                    <input type="radio" :name="row" value="0" v-model="equipmentQuantity"> &nbsp;0
+                    <input type="radio" :name="row" value="0" v-model="equipmentQuantity" /><span class="choicePadding">0</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="1" v-model="equipmentQuantity"> &nbsp;1
+                    <input type="radio" :name="row" value="1" v-model="equipmentQuantity" /><span class="choicePadding">1</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="2" v-model="equipmentQuantity"> &nbsp;2
+                    <input type="radio" :name="row" value="2" v-model="equipmentQuantity" /><span class="choicePadding">2</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="3" v-model="equipmentQuantity"> &nbsp;3
+                    <input type="radio" :name="row" value="3" v-model="equipmentQuantity" /><span class="choicePadding">3</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="4" v-model="equipmentQuantity"> &nbsp;4
+                    <input type="radio" :name="row" value="4" v-model="equipmentQuantity" /><span class="choicePadding">4</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="6" v-model="equipmentQuantity"> &nbsp;6
+                    <input type="radio" :name="row" value="6" v-model="equipmentQuantity" /><span class="choicePadding">6</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="8" v-model="equipmentQuantity"> &nbsp;8
+                    <input type="radio" :name="row" value="8" v-model="equipmentQuantity" /><span class="choicePadding">8</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="12" v-model="equipmentQuantity"> &nbsp;12
+                    <input type="radio" :name="row" value="12" v-model="equipmentQuantity" /><span class="choicePadding">12</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" :name="row" value="16" v-model="equipmentQuantity"> &nbsp;16
+                    <input type="radio" :name="row" value="16" v-model="equipmentQuantity" /><span class="choicePadding">16</span>
                 </label>
                 <span class="checkBoxPadding">
                     <input type="checkbox" id="reverse" v-model="reverse">
@@ -124,11 +124,12 @@ export default {
 
 <style scoped>
 .checkBoxPadding {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.labelPadding {
   padding-left: 0.5em;
   padding-right: 1em;
+}
+.labelPadding,
+.choicePadding {
+  padding-left: 0.5em;
+  padding-right: 0.2em;
 }
 </style>
