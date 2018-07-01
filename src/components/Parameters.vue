@@ -179,6 +179,8 @@
 </template>
 
 <script>
+import store from "../store.js";
+
 export default {
   name: "parameters",
   data() {
@@ -233,11 +235,15 @@ export default {
       return `size="LARGE" `;
     },
     buildParameterString() {
-      return `${this.paramsStart}${this.buildRackUnits}${this.buildRackFace}${
-        this.buildFrontBezel
-      }${this.buildRackLoad}${this.buildRackPanels}${this.buildImageFormat}${
-        this.buildImageSize
-      }${this.paramsEnd}`;
+      var built = `${this.paramsStart}${this.buildRackUnits}${
+        this.buildRackFace
+      }${this.buildFrontBezel}${this.buildRackLoad}${this.buildRackPanels}${
+        this.buildImageFormat
+      }${this.buildImageSize}${this.paramsEnd}`;
+
+      store.commit("createParams", built);
+
+      return built;
     }
   }
 };

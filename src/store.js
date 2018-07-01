@@ -7,6 +7,10 @@ export default new Vuex.Store({
   state: {
     parametersState: ""
   },
-  mutations: {},
+  mutations: {
+    createParams(state, payload) {
+      state.parametersState = payload;
+    }
+  },
   actions: {}
 });
